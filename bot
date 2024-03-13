@@ -1,0 +1,19 @@
+import os
+import telebot
+
+
+bot = telebot.TeleBot("7165574289:AAHei8gx6_fKE_OwVaQ89G-taJx2cfOeOlo")
+
+
+@bot.message_handler(commands=["start"])
+def send_welcome(message):
+  bot.reply_to(message, "Hello! I'm detective iroshan chat bot")
+
+
+@bot.message_handler(commands=["start"])
+def send_message(message):
+  bot.send_message(message.chat.id,)
+
+
+
+bot.polling()
